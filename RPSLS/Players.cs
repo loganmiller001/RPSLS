@@ -20,23 +20,15 @@ namespace RPSLS
 
         public virtual void ChoosePlayer()
         {
-            Console.WriteLine("What is the players name? ");
+            Console.WriteLine("What is the player one's name? ");
             Console.ReadLine();
+            
 
-            switch
-
-            {
-                case "yes":
-                    Console.WriteLine("Is there a second player? ");
-                    break;
-                case "no":
-                    
-
-                default:
-                    break;
-            }
 
         }
+
+
+
 
 
     }

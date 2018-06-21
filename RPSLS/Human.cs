@@ -22,6 +22,7 @@ namespace RPSLS
         {
             base.ChoosePlayer();
 
+            Console.WriteLine("What is Player one's name?");
             Console.WriteLine("What is player two's name?");
             Console.ReadLine();
 

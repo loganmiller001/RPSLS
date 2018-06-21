@@ -8,12 +8,16 @@ namespace RPSLS
 {
     class Computer:Players
     {
+        
 
 
         Computer()
         {
             computerAi = "Player 2 ";
+            
+            
         }
+
 
         public override void ChoosePlayer()
         {
