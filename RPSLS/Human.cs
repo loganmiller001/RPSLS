@@ -22,14 +22,20 @@ namespace RPSLS
         {
             base.ChoosePlayer();
 
-            Console.WriteLine("What is Player one's name?");
-            Console.WriteLine("What is player two's name?");
+            Players player1 = new Human();
+            Players player2 = new Human();
+            Console.WriteLine("What is Player one's name?" + player1);
+            Console.WriteLine("What is player two's name?" + player2);
             Console.ReadLine();
-
+            
 
         }
 
+        public override void ChooseGesture()
+        {
+            base.ChooseGesture();  
 
+        }
 
     }
 }

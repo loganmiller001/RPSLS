@@ -8,5 +8,22 @@ namespace RPSLS
 {
     class Game
     {
-    }
+        Players player1;
+        Players player2;
+
+
+
+
+        
+	}
+
+    
 }
+    
+
+
+
+
+
+
+
