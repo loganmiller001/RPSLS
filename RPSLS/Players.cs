@@ -13,6 +13,7 @@ namespace RPSLS
         public string humanPlayer2;
         public string playerGesture;
         public string GesturesName;
+        public string computerGesture;
         
 
         public Players()
@@ -32,7 +33,7 @@ namespace RPSLS
 
         }
 
-        public static void Main()
+        public static void List()
         {
             List<Players> gesture = new List<Players>();
             gesture.Add(new Players() { GesturesName = "rock" });
@@ -40,6 +41,8 @@ namespace RPSLS
             gesture.Add(new Players() { GesturesName = "scissors" });
             gesture.Add(new Players() { GesturesName = "lizard" });
             gesture.Add(new Players() { GesturesName = "spock" });
+
+          //  return gesture[];
 
        }
 

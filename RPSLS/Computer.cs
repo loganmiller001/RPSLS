@@ -11,10 +11,9 @@ namespace RPSLS
         
 
 
-        Computer()
+        public Computer()
         {
-            computerAi = "Player 2 ";
-            
+            Computer computerAi = new Computer();             
             
         }
 

@@ -13,8 +13,8 @@ namespace RPSLS
 
         public Human()
         {
-            humanPlayer1 = ("Player One");
-            humanPlayer2 = ("Player Two");
+            Human humanPlayer1 = new Human();
+            Human humanPlayer2 = new Human();
         }
 
 
