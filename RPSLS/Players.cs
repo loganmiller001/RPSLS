@@ -8,10 +8,10 @@ namespace RPSLS
 {
     class Players
     {
-        public string humanPlayer1;
+        public string humanPlayerName;
         public string computerAi;
-        public string humanPlayer2;
-        public string playerGesture;
+        public string player1Gesture;
+        public string player2Gesture;
         public string GesturesName;
         public string computerGesture;
         
@@ -23,10 +23,6 @@ namespace RPSLS
         }
 
 
-        public virtual void ChoosePlayer()
-        {
-
-        }
 
         public virtual void ChooseGesture()
         {
@@ -42,7 +38,7 @@ namespace RPSLS
             gesture.Add(new Players() { GesturesName = "lizard" });
             gesture.Add(new Players() { GesturesName = "spock" });
 
-          //  return gesture[];
+          // return gesture[];
 
        }
 

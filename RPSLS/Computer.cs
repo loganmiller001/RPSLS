@@ -11,23 +11,13 @@ namespace RPSLS
         
 
 
-        public Computer()
+        public Computer(string computerAi)
         {
-            Computer computerAi = new Computer();             
-            
+            this.computerAi = computerAi;
         }
 
 
-        public override void ChoosePlayer()
-        {
-            base.ChoosePlayer();
 
-            Players player1 = new Human();
-            Console.WriteLine("What is your name?" + player1);
-            Players player2 = new Computer();
-            Console.WriteLine("You are playing a against a machine." + player2);
-            Console.ReadLine();
-        }
 
         public override void ChooseGesture()
         {

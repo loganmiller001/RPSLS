@@ -8,12 +8,7 @@ namespace RPSLS
 {
     class Game
     {
-        Players player1 = new Human();
-        Players player2 = new Human();
-        Players humanPlayer1 = new Human();
-        Players computerAi = new Computer();
-
-        
+     
 
         public void StartMenu()
         {
@@ -22,18 +17,17 @@ namespace RPSLS
             switch (userInput)
             {
                 case "yes":
-                    Players player1 = new Human();
-                    Players player2 = new Human();
-                    Console.WriteLine("What is Player one's name?" + player1);
-                    Console.WriteLine("What is player two's name?" + player2);
+                    Players player1 = new Human(" ");
+                    Players player2 = new Human(" ");
+                    Console.WriteLine("What is Player one's name?");
+                    Console.WriteLine("What is player two's name?");
                     Console.ReadLine();
-
                     break;
                 case "no":
-                    Players humanPlayer1 = new Human();
-                    Console.WriteLine("What is your name?" + humanPlayer1);
-                    Players humanPlayer2 = new Computer();
-                    Console.WriteLine("You are playing a against a machine." + computerAi);
+                    Players humanPlayer1 = new Human(" ");
+                    Console.WriteLine("What is your name?");
+                    Players computerAi = new Computer("Bob");
+                    Console.WriteLine("You are playing a against a machine named: " );
                     Console.ReadLine();
                     break;
                 default:
