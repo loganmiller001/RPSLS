@@ -19,15 +19,7 @@ namespace RPSLS
 
 
 
-        public override int PlayerGesture()
-        {
-            base.PlayerGesture();
 
-            return choice;
-
-
-            
-        }
 
     }
 }

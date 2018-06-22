@@ -10,7 +10,6 @@ namespace RPSLS
     {
         public string humanPlayerName;
         public string computerAi;
-        public int gesture;
         public int wins;
         public int losses;
         public int choice;
@@ -21,11 +20,9 @@ namespace RPSLS
         
         }
 
-
-
-        public virtual int PlayerGesture()
+        public virtual void PlayerGesture()
         {
-            int choice = 0;
+
             Console.WriteLine("Please enter the gesture you wish to use. Your choices are 'rock', 'paper', 'scissors', 'spock', 'lizard'");
             string switchCondition = Console.ReadLine();
             switchCondition.ToLower();
@@ -54,14 +51,6 @@ namespace RPSLS
                     break;
                 
             }
-            return choice;
-        }
-
-        public virtual int ComputerGesture()
-        {
-            Random rnd = new Random();
-            int gesture = rnd.Next(0, 4);
-            return gesture;
         }
 
 

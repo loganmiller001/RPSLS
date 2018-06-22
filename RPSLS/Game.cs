@@ -8,27 +8,31 @@ namespace RPSLS
 {
     class Game
     {
-     
+        Players player1;
+        Players player2;
 
+
+        public void RunGame()
+        {
+            StartMenu();
+
+            RunRound();
+
+        }
         public void StartMenu()
         {
             Console.WriteLine("Is there a second player? Typing 'no' will have you play against a computer'.");
-            string userInput = Console.ReadLine();
-            userInput.ToLower();
+            string userInput = Console.ReadLine().ToLower();
             switch (userInput)
             {
                 case "yes":
-                    Players player1 = new Human(" ");
-                    Players player2 = new Human(" ");
-                    Console.WriteLine("What is Player one's name?");
-                    Console.WriteLine("What is player two's name?");
+                     player1 = new Human(" ");
+                     player2 = new Human(" ");
                     Console.ReadLine();
                     break;
                 case "no":
-                    Players humanPlayer1 = new Human(" ");
-                    Console.WriteLine("What is your name?");
-                    Players computerAi = new Computer("Bob");
-                    Console.WriteLine("You are playing a against a machine named: " );
+                     player1 = new Human(" ");
+                     player2 = new Computer(" ");
                     Console.ReadLine();
                     break;
                 default:
@@ -42,7 +46,7 @@ namespace RPSLS
         }
         public void RunRound()
         {
-            
+           
         }
 	}
 
