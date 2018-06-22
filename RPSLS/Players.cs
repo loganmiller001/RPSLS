@@ -49,6 +49,8 @@ namespace RPSLS
                     choice = 4;
                     break;
                 default:
+                    Console.WriteLine("Incorrect choice! Please pick again using the five choices.");
+                    PlayerGesture();
                     break;
                 
             }
