@@ -19,9 +19,14 @@ namespace RPSLS
 
 
 
-        public override void ChooseGesture()
+        public override int ComputerGesture()
         {
-            base.ChooseGesture();
+            base.ComputerGesture();
+
+            Random rnd = new Random();
+            int gesture = rnd.Next(0, 4);
+            return gesture;
+
 
         }
     }

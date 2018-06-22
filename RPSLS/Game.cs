@@ -12,7 +12,7 @@ namespace RPSLS
 
         public void StartMenu()
         {
-            Console.WriteLine("Is there a second player?");
+            Console.WriteLine("Is there a second player? Typing 'no' will have you play against a computer'.");
             string userInput = Console.ReadLine();
             switch (userInput)
             {
@@ -31,8 +31,12 @@ namespace RPSLS
                     Console.ReadLine();
                     break;
                 default:
+                    Console.WriteLine("Invalid respone, please type 'yes', or 'no'.");
                     break;
             }
+
+           
+
         }
         
 	}

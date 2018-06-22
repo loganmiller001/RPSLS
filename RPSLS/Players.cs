@@ -10,11 +10,10 @@ namespace RPSLS
     {
         public string humanPlayerName;
         public string computerAi;
-        public string player1Gesture;
-        public string player2Gesture;
-        public string GesturesName;
-        public string computerGesture;
-        
+        public int gesture;
+        public int wins;
+        public int losses;
+        public int choice;
 
         public Players()
         {
@@ -24,21 +23,56 @@ namespace RPSLS
 
 
 
-        public virtual void ChooseGesture()
+        public virtual int PlayerGesture()
         {
+            int choice = 0;
+            Console.WriteLine("Please enter the gesture you wish to use. Your choices are 'rock', 'paper', 'scissors', 'spock', 'lizard'");
+            string switchCondition = Console.ReadLine();
+            switchCondition.ToLower();
 
+            switch (switchCondition)
+            {
+
+                case "rock":
+                    choice = 0;
+                    break;
+                case "paper":
+                    choice = 1;
+                    break;
+                case "scissors":
+                    choice = 2;
+                    break;
+                case "spock":
+                    choice = 3;
+                    break;
+                case "lizard":
+                    choice = 4;
+                    break;
+                default:
+                    break;
+                
+            }
+            return choice;
         }
 
-        public static void List()
+        public virtual int ComputerGesture()
         {
-            List<Players> gesture = new List<Players>();
-            gesture.Add(new Players() { GesturesName = "rock" });
-            gesture.Add(new Players() { GesturesName = "paper" });
-            gesture.Add(new Players() { GesturesName = "scissors" });
-            gesture.Add(new Players() { GesturesName = "lizard" });
-            gesture.Add(new Players() { GesturesName = "spock" });
+            Random rnd = new Random();
+            int gesture = rnd.Next(0, 4);
+            return gesture;
+        }
 
-          // return gesture[];
+
+        public string GestureList()
+        {
+            List<string> GestureList = new List<string>();
+            GestureList.Add("rock");
+            GestureList.Add("paper");
+            GestureList.Add("scissor");
+            GestureList.Add("spock");
+            GestureList.Add("lizard");
+
+            return GestureList[choice];
 
        }
 

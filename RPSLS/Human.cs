@@ -19,10 +19,14 @@ namespace RPSLS
 
 
 
-        public override void ChooseGesture()
+        public override int PlayerGesture()
         {
-            base.ChooseGesture();  
+            base.PlayerGesture();
 
+            return choice;
+
+
+            
         }
 
     }
