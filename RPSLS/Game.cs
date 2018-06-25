@@ -17,8 +17,13 @@ namespace RPSLS
         {
             StartMenu();
 
-            RunRound();
-
+            while (true)
+            {
+                RunRound();
+                int roundWinner = CalculateResults();
+                TheGame(roundWinner);
+                CheckWinner();
+            }
             
 
         }
@@ -44,7 +49,7 @@ namespace RPSLS
                     break;
             }
 
-            RunRound();
+           
 
         }
         public void RunRound()
@@ -68,12 +73,12 @@ namespace RPSLS
         {
             if (roundWinner == 1 || roundWinner == 3)
             {
-                Console.WriteLine(" Wins the round.", player1);
+                Console.WriteLine("Player one Wins the round.", player1);
                 IncrementScores(player1);
             }
             else if (roundWinner == 2 || roundWinner == 4)
             {
-                Console.WriteLine(" Wins the round.", player2);
+                Console.WriteLine("Player two Wins the round.", player2);
                 IncrementScores(player2);
             }
             else if (roundWinner == 0)
@@ -85,19 +90,19 @@ namespace RPSLS
         {
             switch (player.GestureList())
             {
-                case "{0}":
+                case "rock":
                     Console.WriteLine("Has picked rock.");
                     break;
-                case "{1}":
+                case "paper":
                     Console.WriteLine("Has picked paper.");
                     break;
-                case "{2}":
+                case "scissors":
                     Console.WriteLine("Has picked scissors.");
                     break;
-                case "{3}":
+                case "spock":
                     Console.WriteLine("Has picked spock");
                     break;
-                case "{4}":
+                case "lizard":
                     Console.WriteLine("Has picked lizard");
                     break;
                 

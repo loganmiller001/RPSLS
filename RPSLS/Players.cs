@@ -26,6 +26,7 @@ namespace RPSLS
             string switchCondition = Console.ReadLine();
             switchCondition.ToLower();
 
+        
             switch (switchCondition)
             {
 
