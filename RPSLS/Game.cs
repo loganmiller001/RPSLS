@@ -57,6 +57,30 @@ namespace RPSLS
 
         }
 
+        public int CalculateResults()
+        {
+            int numberOfGestures = 5;
+            int roundWinner = (numberOfGestures + player1.choice - player2.choice);
+            return roundWinner;
+        }
+
+        public void TheGame(int roundWinner)
+        {
+            if (roundWinner == 1 || roundWinner == 3)
+            {
+                Console.WriteLine(" Wins the round.", player1);
+                IncrementScores(player1);
+            }
+            else if (roundWinner == 2 || roundWinner == 4)
+            {
+                Console.WriteLine(" Wins the round.", player2);
+                IncrementScores(player2);
+            }
+            else if (roundWinner == 0)
+            {
+                Console.WriteLine("Tie?!");
+            }
+        }
         public void DisplayResult(Players player)
         {
             switch (player.GestureList())
@@ -92,10 +116,32 @@ namespace RPSLS
             if (player1.wins == 2)
             {
                 Console.WriteLine("Player one wins the game.");
+                AskForAnotherGame();
             }
             else if(player2.wins == 2)
             {
                 Console.WriteLine("Player two wins the game.");
+                AskForAnotherGame();
+            }
+        }
+
+        public void AskForAnotherGame()
+        {
+            Console.WriteLine("Would you like to play another game?");
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "yes")
+            {
+                RunGame();
+            }
+            else if(answer == "no")
+            {
+                Console.WriteLine("Hope you enjoyed the game.");
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("Wrong selection. Please type in 'yes' or 'no'.");
+                AskForAnotherGame();
             }
         }
             
