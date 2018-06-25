@@ -18,6 +18,8 @@ namespace RPSLS
 
             RunRound();
 
+            DisplayResult();
+
         }
         public void StartMenu()
         {
@@ -46,7 +48,19 @@ namespace RPSLS
         }
         public void RunRound()
         {
+            player1.PlayerGesture();
+            Console.ReadLine();
+            player2.PlayerGesture();
+            Console.ReadLine();
+            
+
+            DisplayResult();
            
+        }
+
+        public void DisplayResult()
+        {
+            
         }
 	}
 
