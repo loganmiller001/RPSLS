@@ -11,7 +11,6 @@ namespace RPSLS
         public string humanPlayerName;
         public string computerAi;
         public int wins;
-        public int losses;
         public int choice;
 
         public Players()

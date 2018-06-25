@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculateWinLoss.cs" />
     <Compile Include="Computer.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Human.cs" />
